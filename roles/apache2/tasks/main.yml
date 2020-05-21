@@ -9,8 +9,8 @@
 
 - name: Add the repository for libapache2-mod-fastcgi
   become: yes
-  command: sudo add-apt-repository -y ppa:ondrej/apache2 |sudo apt-key update | sudo apt-get update | sudo apt-get install -y apache2 apache2-mpm-event libapache2-mod-fastcgi
-    
+  command: sudo add-apt-repository 'deb http://ppa.launchpad.net/ondrej/apache2/ubuntu Ubuntu 18.04.4 main ' | sudo add-apt-repository 'deb-src http://ppa.launchpad.net/ondrej/apache2/ubuntu Ubuntu 18.04.4 main '
+  
 - name: Install libapache2-mod-fastcgi
   apt: 
     name:
