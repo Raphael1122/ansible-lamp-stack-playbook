@@ -9,7 +9,7 @@
 
 - name: Enable apache2 modules
   become: yes
-  command: a2enmod rewrite actions alias fastcgi proxy_fcgi
+  command: sudo a2enmod rewrite actions alias fastcgi proxy_fcgi
 
 - name: Upload apache2 default configuration
   become: yes
@@ -18,7 +18,7 @@
 - name: Remove default apache2 index.html file
   become: yes
   ignore_errors: yes
-  command: rm /var/www/html/index.html 
+  command: sudo rm /var/www/html/index.html 
 
 - name: Upload default index.php for host 
   become: yes
