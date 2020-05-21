@@ -9,9 +9,10 @@
 
 - name: Add the repository for libapache2-mod-fastcgi
   become: yes
-  command: sudo add-apt-repository 'deb http://archive.ubuntu.com/ubuntu trusty multiverse'
-  command: sudo add-apt-repository 'deb http://archive.ubuntu.com/ubuntu trusty-updates multiverse'
-  command: sudo add-apt-repository 'deb http://security.ubuntu.com/ubuntu trusty-security multiverse'
+  command: sudo add-apt-repository 'deb http://ftp.de.debian.org/debian jessie main non-free'
+  command: sudo apt-get update
+  command: sudo dpkg -i /absolute/path/to/deb/file
+  command: sudo apt-get install -f
 
 - name: Update
   become: yes
