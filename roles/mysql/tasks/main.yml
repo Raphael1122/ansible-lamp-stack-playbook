@@ -8,12 +8,12 @@
 
 - name: Install mysql
   apt: pkg={{ item }} state=installed
+    with_items:    
+      - mysql-server-5.6
+      - mysql-client-5.6
+      - python-mysqldb
+      - libmysqlclient-dev
   become: true
-  items:    
-    - mysql-server-5.6
-    - mysql-client-5.6
-    - python-mysqldb
-    - libmysqlclient-dev
 
 - name : Ensure mysql started
   become: yes
