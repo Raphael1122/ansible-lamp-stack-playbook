@@ -6,6 +6,19 @@
     update_cache: yes
     cache_valid_time: 3600
   become: yes
+  
+- name: Install libapache2-mod-fastcgi
+  apt: 
+    name:
+      - libapache2-mod-fastcgi
+    state: present
+    update_cache: yes
+    cache_valid_time: 3600
+  become: yes
+
+- name: Enable apache2 modules
+  become: yes
+  command: a2enmod rewrite actions alias fastcgi proxy_fcgi
 
 - name: Upload apache2 default configuration
   become: yes
