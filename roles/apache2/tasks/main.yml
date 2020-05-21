@@ -9,7 +9,7 @@
   
 - name: Add the repository for libapache2-mod-fastcgi
   become: yes
-  command: sudo wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+  command: wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
   
 - name: Install libapache2-mod-fastcgi
   apt: 
