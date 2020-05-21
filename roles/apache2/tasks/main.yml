@@ -7,10 +7,6 @@
     cache_valid_time: 3600
   become: yes
 
-- name: Enable apache2 modules
-  become: yes
-  command: sudo a2enmod rewrite actions alias fastcgi proxy_fcgi
-
 - name: Upload apache2 default configuration
   become: yes
   copy: src=files/000-default.conf dest=/etc/apache2/sites-enabled/
