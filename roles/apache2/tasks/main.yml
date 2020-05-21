@@ -9,8 +9,8 @@
 
 - name: Add the repository for libapache2-mod-fastcgi
   become: yes
-  command: sudo wget https://mirrors.edge.kernel.org/ubuntu/pool/multiverse/liba/libapache-mod-fastcgi/libapache2-mod-fastcgi_2.4.7~0910052141-1.2_amd64.deb | sudo dpkg -i libapache2-mod-fastcgi_2.4.7~0910052141-1.2_amd64.deb | sudo apt install libapache2-mod-fastcgi
-  
+  command: sudo add-apt-repository 'deb http://archive.ubuntu.com/ubuntu trusty multiverse' | 'deb http://archive.ubuntu.com/ubuntu trusty-updates multiverse' | 'deb http://security.ubuntu.com/ubuntu trusty-security multiverse'
+
 - name: Update
   become: yes
   command: sudo apt-get update 
