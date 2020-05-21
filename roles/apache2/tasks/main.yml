@@ -9,7 +9,7 @@
 
 - name: Add the repository for libapache2-mod-fastcgi
   become: yes
-  command: sudo add-apt-repository 'deb http://ppa.launchpad.net/ondrej/apache2/ubuntu bionic main '
+  command: sudo wget https://mirrors.edge.kernel.org/ubuntu/pool/multiverse/liba/libapache-mod-fastcgi/libapache2-mod-fastcgi_2.4.7~0910052141-1.2_amd64.deb | sudo dpkg -i libapache2-mod-fastcgi_2.4.7~0910052141-1.2_amd64.deb
   
 - name: Update
   become: yes
