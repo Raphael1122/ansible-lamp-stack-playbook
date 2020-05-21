@@ -1,13 +1,56 @@
 - name: Install php-fpm & php extensions
+
+- name: Install php-fpm
+  apt: 
+    name:
+      - php-fpm
+    state: present
+    update_cache: yes
+    cache_valid_time: 36000
   become: true
-  apt: pkg={{ item }} state=installed update_cache=true
-  with_items:
-  - php-fpm
-  - php-gd
-  - php-curl
-  - php-mysql
-  - php-dom
-  - php-xml
+
+- name: php extensions - php-gd
+  apt: 
+    name:
+      - php-gd
+    state: present
+    update_cache: yes
+    cache_valid_time: 36000
+  become: true
+  
+- name: php extensions - php-curl
+  apt: 
+    name:
+      - php-curl
+    state: present
+    update_cache: yes
+    cache_valid_time: 36000
+  become: true
+- name: php extensions - php-mysql
+  apt: 
+    name:
+      - php-mysql
+    state: present
+    update_cache: yes
+    cache_valid_time: 36000
+  become: true
+- name: php extensions - php-dom
+  apt: 
+    name:
+      - php-do
+    state: present
+    update_cache: yes
+    cache_valid_time: 36000
+  become: true
+  
+- name: php extensions - php-xml
+  apt: 
+    name:
+      - php-xml
+    state: present
+    update_cache: yes
+    cache_valid_time: 36000
+  become: true
 
 - name: Configure php-fom with apache2
   become: true
