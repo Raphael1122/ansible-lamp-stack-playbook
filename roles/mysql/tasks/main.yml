@@ -24,8 +24,12 @@
 
 - name: Update MySQL root password for all root accounts
   mysql_user: name=root 
-              host= 127.0.0.1 
+              host={{ item }} 
               password={{ mysql_root_password }}
               login_user=root
               login_password=""
               state=present
+  with_items:
+    - 127.0.0.1
+    - ::1
+    - localhost
