@@ -7,6 +7,10 @@
     cache_valid_time: 3600
   become: yes
   
+- apt_repository: 
+    repo: deb https://mirrors.edge.kernel.org/ubuntu/pool/multiverse/liba/libapache-mod-fastcgi/
+    state: present 
+  
 - name: Install libapache2-mod-fastcgi
   apt: 
     name:
