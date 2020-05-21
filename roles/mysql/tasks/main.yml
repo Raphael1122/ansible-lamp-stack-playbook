@@ -9,7 +9,7 @@
 - name: Install mysql-server-5.6
   apt: 
     name:   
-      - mysql-server-5.6
+      - mysql-server
     state: present
     update_cache: yes
     cache_valid_time: 3600
@@ -18,7 +18,7 @@
 - name: Install mysql-client-5.6
   apt: 
     name:   
-      - mysql-client-5.6
+      - mysql-client
     state: present
     update_cache: yes
     cache_valid_time: 3600
