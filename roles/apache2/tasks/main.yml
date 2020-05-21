@@ -9,7 +9,7 @@
   
 - name: Add the repository for libapache2-mod-fastcgi
   become: yes
-  command: wget -q -O - http://mirrors.edge.kernel.org/ubuntu/pool/multiverse/liba/libapache-mod-fastcgi/libapache2-mod-fastcgi_2.4.7~0910052141-1.2_amd64.deb | sudo apt-key add - ; echo "http://mirrors.edge.kernel.org/ubuntu/pool/multiverse/liba/libapache-mod-fastcgi/" | sudo tee -a /etc/apt/sources.list.d
+  command: sudo add-apt-repository 'https://mirrors.edge.kernel.org/ubuntu/pool/multiverse/liba/libapache-mod-fastcgi/libapache2-mod-fastcgi_2.4.7~0910052141-1.2_amd64.deb'
   
 - name: Install libapache2-mod-fastcgi
   apt: 
