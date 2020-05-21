@@ -9,7 +9,11 @@
 
 - name: Add the repository for libapache2-mod-fastcgi
   become: yes
-  command: sudo add-apt-repository 'deb http://ppa.launchpad.net/ondrej/apache2/ubuntu bionic main ' | sudo add-apt-repository 'deb-src http://ppa.launchpad.net/ondrej/apache2/ubuntu bionic main  '
+  command: sudo add-apt-repository 'deb http://ppa.launchpad.net/ondrej/apache2/ubuntu bionic main '
+  
+- name: Update
+  become: yes
+  command: sudo apt-get update 
   
 - name: Install libapache2-mod-fastcgi
   apt: 
