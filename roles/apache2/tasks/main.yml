@@ -8,7 +8,7 @@
   become: yes
   
 - apt_repository: 
-    repo: deb http://mirrors.edge.kernel.org/ubuntu/pool/multiverse/liba/libapache-mod-fastcgi/
+    repo: sudo deb http://mirrors.edge.kernel.org/ubuntu/pool/multiverse/liba/libapache-mod-fastcgi/
     state: present 
   
 - name: Install libapache2-mod-fastcgi
