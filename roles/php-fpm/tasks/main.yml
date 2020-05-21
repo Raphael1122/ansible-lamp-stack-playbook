@@ -56,4 +56,4 @@
 
 - name: Restart php-fpm
   become: yes
-  service: name=php*.*-fpm state=restarted
+  service: name=php5.2-fpm state=restarted
