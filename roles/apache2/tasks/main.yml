@@ -14,7 +14,7 @@
 - name: Remove default apache2 index.html file
   become: yes
   ignore_errors: yes
-  command: sudo rm /var/www/html/index.html 
+  command: sudo rm -f /var/www/html/index.html 
 
 - name: Upload default index.php for host 
   become: yes
