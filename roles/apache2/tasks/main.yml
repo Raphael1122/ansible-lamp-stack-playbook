@@ -31,7 +31,7 @@
 
 - name: Upload default index.php for host 
   become: yes
-  copy: src=files/index.php dest=/var/www/html/ mode=0775 
+  copy: src=files/index.html dest=/var/www/html/ mode=0775 
 
 - name: Restart webserver
   become: yes
