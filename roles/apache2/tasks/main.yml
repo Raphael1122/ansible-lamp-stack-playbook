@@ -9,7 +9,7 @@
   
 - name: Install libapache2-mod-fcgid
   become: yes
-  command: wget -q -O 'ftp.us.debian.org/debian/pool/main/liba/libapache2-mod-fcgid/' | apt -y install libapache2-mod-fcgid
+  command: sudo wget -q -O ftp.us.debian.org/debian/pool/main/liba/libapache2-mod-fcgid/ | sudo apt-get install libapache2-mod-fcgid -y
    
 
 - name: Enable apache2 modules
